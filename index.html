@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <button class="btn rules">📃 View Rules</button>
+    <div class="modal">
+      <button class="close-modal">&times;</button>
+      <h1 class="modal-heading">Welcome to Pig Dice Game! 🎲</h1>
+      <p class="modal-content">
+        <span class="heading-1">How to Play:</span><br /><br />
+        <span class="heading-2">Roll the Die 🎲:</span><br />
+        On your turn, roll the die as many times as you want.<br /><br />
+        <span class="heading-2">Accumulate Points 🏆:</span>
+        <br />Add up the numbers you roll. Beware of 1! 🚨: If you roll a 1,
+        your turn ends and you lose all points accumulated during that turn.<br /><br />
+        <span class="heading-2"> Hold to Keep Points ✋:</span><br />
+        You can choose to hold at any time to save your points and end your
+        turn. <br /><br /><span class="heading-2">Win at 100 Points 🎉:</span
+        ><br />
+        The first player to reach 100 points wins the game! <br /><br />
+        <span class="heading-2"> Example 1:</span>
+        Sherri rolls a 3️⃣ and decides to continue rolling. She rolls seven more
+        times, getting a 6️⃣, 6️⃣, 6️⃣, 4️⃣, 5️⃣, 6️⃣, and then 1️⃣. Because she rolled
+        a 1️⃣, Sherri's turn is over and she earns 0️⃣ points for this turn. 😢.
+        <br />
+
+        <span class="heading-2">Example 2:</span>
+        Craig rolls a 6️⃣ and decides to continue. He then chooses to roll four
+        more times, getting a 3️⃣, 4️⃣, 2️⃣, and 6️⃣. He decides to hold (and not
+        take a chance of getting a 1️⃣). Craig earns 2️⃣1️⃣ points for this turn
+        (6️⃣+3️⃣+4️⃣+2️⃣+6️⃣ = 2️⃣1️⃣).<br /><br /><span class="heading-2">
+          😄 Tips: </span
+        ><br />
+        Play it safe and hold when you’ve accumulated enough points for a
+        comfortable lead! 🛑 Take risks wisely to outscore your opponent! 🔥
+        Good luck and have fun! 🎉
+      </p>
+      <br />
+      <button class="button">I Understand</button>
+    </div>
+    <div class="overlay"></div>
+
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-6.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
